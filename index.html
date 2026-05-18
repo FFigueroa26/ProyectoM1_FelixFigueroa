@@ -5,23 +5,37 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coloorfly Studio | Generador Cromático</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
 
   <header>
     <h1> <i>Coloorfly Studio — Tu laboratorio de color.</i> </h1>
-    <p>Tamaño elegido, paleta generada: ¡así de rápido!</p>
+    <p>Tamaño elegido, formato escogido, paleta generada: ¡así de rápido!</p>
   </header>
 
   <section class="controles">
-    <label for="tamano">Composición:</label>
-    <select id="tamano">
-      <option value="6">6 colores</option>
-      <option value="8">8 colores</option>
-      <option value="9">9 colores</option>
-    </select>
-    <button id="btnGenerar">¡Generar!</button>
+    <div class="radiosGrupo">
+    <label>Composición:</label>
+      <input type="radio" name="composicion" id="composicion6" value="6">
+      <label for="composicion6">6</label>
+      <input type="radio" name="composicion" id="composicion8" value="8">
+      <label for="composicion8">8</label>
+      <input type="radio" name="composicion" id="composicion9" value="9" checked>
+      <label for="composicion9">9</label>
+    </div>
+   
+    <div class="radiosGrupo">
+      <label>Formato: </label>
+      <input type="radio" name="formato" id="hex" value="hex" checked>
+      <label for="hex">HEX</label>
+      <input type="radio" name="formato" id="hsl" value="hsl">
+      <label for="hsl">HSL</label>
+    </div>
+
+    <button id="botonGenerar">¡Generar!</button>
   </section>
 
   <main>
@@ -31,8 +45,8 @@
   </main>
 
   <footer>
+      
     <p> <i>Un experimento de color por Felix Figueroa.</i> </p>
   </footer>
 </body>
-
 </html>

@@ -1,0 +1,11 @@
+@media (max-width: 650px) {
+  #paleta {
+    grid-template-columns: repeat(2, 185px);
+  }
+}
+
+@media (max-width: 430px) {
+  #paleta {
+    grid-template-columns: 185px;
+  }
+}

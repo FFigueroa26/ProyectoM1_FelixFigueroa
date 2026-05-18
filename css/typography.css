@@ -1,0 +1,10 @@
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 6px;
+}
