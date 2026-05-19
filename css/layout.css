@@ -1,0 +1,32 @@
+header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#paleta {
+  display: grid;
+  grid-template-columns: repeat(3, 185px);
+  gap: 28px 30px;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.lineaFooter {
+  width: min(760px, 90%);
+  height: 1px;
+  margin: 48px auto 24px;
+  background: linear-gradient(to right, transparent, #999, transparent);
+}
+
+footer {
+  margin-top: 0;
+  padding-bottom: 12px;
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+}

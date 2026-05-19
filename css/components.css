@@ -1,0 +1,189 @@
+.controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px 28px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.radiosGrupo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.radiosGrupo > label:not([for]) {
+  font-size: 1rem;
+  color: #333;
+  margin-right: 4px;
+}
+
+.radiosGrupo input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.radiosGrupo label[for] {
+  padding: 7px 12px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  color: #555;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.radiosGrupo input[type="radio"]:checked + label {
+  border-color: #222;
+  background-color: #222;
+  color: white;
+}
+
+.radiosGrupo input[type="radio"]:focus-visible + label {
+  outline: 3px solid #555;
+  outline-offset: 2px;
+}
+
+.controles button:focus {
+  outline: 3px solid #555;
+  outline-offset: 2px;
+}
+
+.controles button {
+  padding: 9px 22px;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.controles button:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+}
+
+.tarjeta-color {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 185px;
+  padding: 0;
+  text-align: left;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  position: relative;
+  animation: aparecer 0.3s;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta-color:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.tarjeta-color:focus {
+  outline: 3px solid #222;
+  outline-offset: 2px;
+}
+
+.muestra {
+  height: 132px;
+  width: 100%;
+}
+
+.info-color {
+  padding: 8px;
+}
+
+.etiqueta,
+.codigo {
+  display: block;
+}
+
+.etiqueta {
+  color: #888;
+  font-size: 0.7rem;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.codigo {
+  color: #111;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.tarjeta-color:hover .tooltip,
+.tarjeta-color:focus .tooltip {
+  display: block;
+}
+
+#toast {
+  display: none;
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: fit-content;
+  max-width: 90%;
+  background-color: #222;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  animation: subirToast 0.25s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subirToast {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
