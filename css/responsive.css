@@ -1,5 +1,71 @@
 @media (max-width: 430px) {
+  body {
+    padding: 24px 14px;
+  }
+
+  header {
+    margin-bottom: 22px;
+  }
+
+  header h1 {
+    font-size: 1.65rem;
+    line-height: 1.2;
+  }
+
+  header p {
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+
+  .controles {
+    gap: 12px 14px;
+    margin-bottom: 18px;
+  }
+
+  .radiosGrupo {
+    gap: 6px;
+  }
+
+  .radiosGrupo > label:not([for]) {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .radiosGrupo label[for] {
+    padding: 7px 11px;
+  }
+
+  .controles button {
+    padding: 9px 18px;
+  }
+
+  #paleta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    max-width: 360px;
+    margin-top: 20px;
+  }
+
   .tarjetaColor {
-    width: min(185px, 100%);
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .muestra {
+    height: 102px;
+  }
+
+  .info-color {
+    padding: 7px;
+  }
+
+  .codigo {
+    font-size: 0.76rem;
+  }
+
+  .lineaFooter {
+    margin-top: 34px;
   }
 }
