@@ -9,11 +9,13 @@ main {
 }
 
 #paleta {
-  display: grid;
-  grid-template-columns: repeat(3, 185px);
+  display: flex;
+  flex-wrap: wrap;
   gap: 28px 30px;
   justify-content: center;
+  max-width: 615px;
   margin-top: 28px;
+  margin-inline: auto;
 }
 
 .lineaFooter {

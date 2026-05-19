@@ -73,7 +73,7 @@
   transform: translateY(-2px);
 }
 
-.tarjeta-color {
+.tarjetaColor {
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -88,22 +88,24 @@
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.tarjeta-color:hover {
+.tarjetaColor:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   transform: translateY(-4px);
 }
 
-.tarjeta-color:focus {
+.tarjetaColor:focus {
   outline: 3px solid #222;
   outline-offset: 2px;
 }
 
 .muestra {
+  display: block;
   height: 132px;
   width: 100%;
 }
 
 .info-color {
+  display: block;
   padding: 8px;
 }
 
@@ -141,8 +143,8 @@
   pointer-events: none;
 }
 
-.tarjeta-color:hover .tooltip,
-.tarjeta-color:focus .tooltip {
+.tarjetaColor:hover .tooltip,
+.tarjetaColor:focus .tooltip {
   display: block;
 }
 
