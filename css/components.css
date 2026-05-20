@@ -145,7 +145,8 @@
   display: none;
   position: fixed;
   left: 50%;
-  bottom: 28px;
+  bottom: 100px;
+  top: auto;
   transform: translateX(-50%);
   z-index: 10;
   width: fit-content;

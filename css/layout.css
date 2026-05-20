@@ -21,14 +21,32 @@ main {
 .lineaFooter {
   width: min(760px, 90%);
   height: 1px;
-  margin: 48px auto 24px;
+  margin: 64px auto 32px;
   background: linear-gradient(to right, transparent, #999, transparent);
 }
 
 footer {
   margin-top: 0;
-  padding-bottom: 12px;
+  padding-bottom: 24px;
   text-align: center;
   color: #777;
   font-size: 0.9rem;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.footerLinks a {
+  color: #222;
+  text-decoration: underline;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footerLinks a:hover {
+  color: #888;
 }

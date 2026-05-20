@@ -13,7 +13,8 @@ Aplicación web para generar paletas de color aleatorias, elegir cantidad de col
 - Generación de paletas aleatorias.
 - Selección de composición: `6`, `8` o `9` colores.
 - Cambio de formato visual: `HEX` o `HSL`.
-- Copia de código al portapapeles con clic sobre cada tarjeta.
+- Bloqueo de colores individuales para conservarlos al regenerar la paleta.
+- Copia de código al portapapeles con clic en el ícono de cada tarjeta.
 - Notificaciones tipo toast para confirmar acciones.
 - Diseño responsive para escritorio y celular.
 
@@ -23,8 +24,11 @@ Aplicación web para generar paletas de color aleatorias, elegir cantidad de col
 2. En `Composición`, elige cuántos colores quieres generar (`6`, `8` o `9`).
 3. En `Formato`, selecciona `HEX` o `HSL` según tu necesidad.
 4. Pulsa el botón `Generar` para crear una nueva paleta.
-5. Haz clic en cualquier tarjeta de color para copiar su código.
-6. Verás un mensaje en pantalla confirmando el formato activo, la composición elegida o el código copiado.
+5. Pasa el mouse sobre una tarjeta para ver los íconos de acción.
+6. Haz clic en el ícono de copiar para copiar el código del color.
+7. Haz clic en el ícono de candado para bloquear ese color y conservarlo al regenerar.
+8. Para desbloquear un color, haz clic nuevamente en el candado.
+9. Verás un mensaje en pantalla confirmando cada acción.
 
 ## Manual técnico
 
