@@ -15,7 +15,7 @@
   flex-wrap: wrap;
 }
 
-.radiosGrupo > label:not([for]) {
+.radiosGrupo > .grupoTitulo {
   font-size: 1rem;
   color: #333;
   margin-right: 4px;
@@ -37,7 +37,11 @@
   color: #555;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.radiosGrupo label[for]:hover {
+  transform: translateY(-2px);
 }
 
 .radiosGrupo input[type="radio"]:checked + label {
@@ -59,7 +63,7 @@
 .controles button {
   padding: 9px 22px;
   font-size: 1rem;
-  font-family: Arial, sans-serif;
+  font-family: 'Playfair Display', serif;
   background-color: #222;
   color: white;
   border: none;
@@ -81,8 +85,7 @@
   width: 185px;
   padding: 0;
   text-align: left;
-  font-family: Arial, sans-serif;
-  cursor: pointer;
+  cursor: default;
   position: relative;
   animation: aparecer 0.3s;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -134,12 +137,11 @@
   color: #111;
   font-size: 0.72rem;
   line-height: 1.2;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: visible;
+  text-overflow: unset;
 }
-
-
 
 #toast {
   display: none;

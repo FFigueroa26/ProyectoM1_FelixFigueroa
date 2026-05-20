@@ -94,8 +94,7 @@ const svgCerrado = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="1
 const svgCopiar = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
 
 function crearTarjeta(colorHex, colorHsl, bloqueada) {
-  const tarjeta = document.createElement("button");
-  tarjeta.type = "button";
+  const tarjeta = document.createElement("div");
   tarjeta.className = "tarjetaColor";
   tarjeta.dataset.hex = colorHex;
   tarjeta.dataset.hsl = colorHsl;
@@ -278,8 +277,24 @@ function eliminarPaleta(index) {
   mostrarToast("Paleta eliminada");
 }
 
+function eliminarTodasPaletas() {
+  const paletas = obtenerPaletas();
+  if (paletas.length === 0) {
+    mostrarToast("No hay paletas para eliminar");
+    return;
+  }
+  if (!confirm("¿Eliminar todas las paletas guardadas? Esta acción no se puede deshacer.")) {
+    return;
+  }
+  guardarEnStorage([]);
+  renderizarPaletas();
+  mostrarToast("Todas las paletas han sido eliminadas");
+}
+
 boton.addEventListener("click", function () { generarPaleta(); });
 botonGuardar.addEventListener("click", guardarPaletaActual);
+const botonEliminarTodas = document.getElementById("botonEliminarTodas");
+botonEliminarTodas.addEventListener("click", eliminarTodasPaletas);
 
 radiosFormato.forEach(function (radio) { radio.addEventListener("change", cambiarFormato); });
 radiosComposicion.forEach(function (radio) { radio.addEventListener("change", cambiarComposicion); });

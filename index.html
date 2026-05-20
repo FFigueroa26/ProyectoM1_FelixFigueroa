@@ -5,6 +5,8 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coloorfly Studio | Generador Cromático</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap">
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -12,13 +14,13 @@
 <body>
 
   <header>
-    <h1> <i>Coloorfly Studio — Tu laboratorio de color.</i> </h1>
+    <h1><i>Coloorfly Studio — Tu laboratorio de color.</i></h1>
     <p>Tamaño elegido, formato escogido, paleta generada: ¡así de rápido!</p>
   </header>
 
   <div class="controles">
     <div class="radiosGrupo">
-      <label>Composición:</label>
+      <span class="grupoTitulo">Composición:</span>
       <input type="radio" name="composicion" id="composicion6" value="6">
       <label for="composicion6">6</label>
       <input type="radio" name="composicion" id="composicion8" value="8">
@@ -26,27 +28,51 @@
       <input type="radio" name="composicion" id="composicion9" value="9" checked>
       <label for="composicion9">9</label>
     </div>
-
     <div class="radiosGrupo">
-      <label>Formato: </label>
+      <span class="grupoTitulo">Formato:</span>
       <input type="radio" name="formato" id="hex" value="hex" checked>
       <label for="hex">HEX</label>
       <input type="radio" name="formato" id="hsl" value="hsl">
       <label for="hsl">HSL</label>
     </div>
-
     <button id="botonGenerar">¡Generar!</button>
   </div>
 
   <div class="pagina">
+    <aside id="guiaUso" aria-label="Guía de uso">
+      <div class="pasoGuia">
+        <span class="pasoIcono">✦ </span>
+        <span class="pasoTitulo">Genera</span>
+        <span class="pasoDesc">Crea una nueva paleta aleatoria con un clic.</span>
+      </div>
+        <div class="pasoGuia">
+        <span class="pasoIcono">✦ </span>
+        <span class="pasoTitulo">Copia</span>
+        <span class="pasoDesc">Lleva el código HEX o HSL donde lo necesites.</span>
+      </div>
+      <div class="pasoGuia">
+        <span class="pasoIcono">✦ </span>
+        <span class="pasoTitulo">Bloquea</span>
+        <span class="pasoDesc">Fija los colores que te gustan antes de regenerar.</span>
+      </div>
+      <div class="pasoGuia">
+        <span class="pasoIcono">✦ </span>
+        <span class="pasoTitulo">Guarda</span>
+        <span class="pasoDesc">Guarda tus paletas favoritas para volver a ellas.</span>
+      </div>
+    </aside>
+
     <main>
       <div id="paleta"></div>
     </main>
+
     <aside id="panelGuardadas">
       <button id="botonGuardar">Guardar paleta</button>
-      <h2>Tus paletas guardadas</h2>
+      <button id="botonEliminarTodas">Eliminar todas</button>
+      <h2>Paletas guardadas</h2>
       <div id="listaPaletas"></div>
     </aside>
+
   </div>
 
   <div class="lineaFooter"></div>

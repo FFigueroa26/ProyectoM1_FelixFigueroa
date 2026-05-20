@@ -4,10 +4,9 @@
 @import url("responsive.css");
 
 body {
-  font-family: Arial, sans-serif;
   font-size: 16px;
   color: #222;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   padding: 36px 20px;
   min-height: 100vh;
 }

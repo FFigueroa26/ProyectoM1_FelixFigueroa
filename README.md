@@ -18,6 +18,7 @@ Aplicación web para generar paletas de color aleatorias, elegir cantidad de col
 - Guardado de paletas en `localStorage` con persistencia al refrescar la página.
 - Detección de paletas duplicadas al intentar guardar.
 - Renombrado de paletas guardadas directamente desde el panel.
+- Eliminación de todas las paletas guardadas con un botón único.
 - Notificaciones tipo toast para confirmar acciones.
 - Diseño responsive para escritorio y celular.
 
@@ -34,7 +35,8 @@ Aplicación web para generar paletas de color aleatorias, elegir cantidad de col
 9. Pulsa `Guardar paleta` en el panel lateral para guardar la paleta actual.
 10. Las paletas guardadas persisten aunque recargues la página.
 11. Puedes renombrar cualquier paleta guardada haciendo clic en su nombre.
-12. Verás un mensaje en pantalla confirmando cada acción.
+13. Usa el botón `Eliminar todas` para borrar todas las paletas guardadas al mismo tiempo.
+14. Verás un mensaje en pantalla confirmando cada acción.
 
 ## Manual técnico
 
