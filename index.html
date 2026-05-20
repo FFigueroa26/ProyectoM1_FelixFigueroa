@@ -16,7 +16,7 @@
     <p>Tamaño elegido, formato escogido, paleta generada: ¡así de rápido!</p>
   </header>
 
-  <section class="controles">
+  <div class="controles">
     <div class="radiosGrupo">
     <label>Composición:</label>
       <input type="radio" name="composicion" id="composicion6" value="6">
@@ -34,22 +34,21 @@
       <input type="radio" name="formato" id="hsl" value="hsl">
       <label for="hsl">HSL</label>
     </div>
-
     <button id="botonGenerar">¡Generar!</button>
-  </section>
-
-    <div id="toast" role="status" aria-live="polite"></div>
+  </div>
 
   <main>
     <div id="paleta">
     </div>
   </main>
-      <div class="lineaFooter"></div>
+
   <footer>
-      
+    <div class="lineaFooter"></div>
     <p> <i>Un experimento de color por Felix Figueroa.</i> </p>
   </footer>
 
-  <script src="js/script.js"></script>
+      <div id="toast" role="status" aria-live="polite"></div>
+      <script src="js/script.js"></script>
+
 </body>
 </html>

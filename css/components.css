@@ -77,7 +77,7 @@
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: visible;
   width: 185px;
   padding: 0;
   text-align: left;
@@ -102,11 +102,20 @@
   display: block;
   height: 132px;
   width: 100%;
+  border-radius: 9px 9px 0 0;
 }
 
 .info-color {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 8px;
+}
+
+.infoTexto {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
 .etiqueta,
@@ -123,30 +132,14 @@
 
 .codigo {
   color: #111;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   line-height: 1.2;
-  word-break: break-word;
-}
-
-.tooltip {
-  display: none;
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.75);
-  color: white;
-  font-size: 0.75rem;
-  padding: 4px 10px;
-  border-radius: 4px;
   white-space: nowrap;
-  pointer-events: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.tarjetaColor:hover .tooltip,
-.tarjetaColor:focus .tooltip {
-  display: block;
-}
+
 
 #toast {
   display: none;
@@ -188,4 +181,65 @@
     opacity: 1;
     transform: translate(-50%, 0);
   }
+}
+
+.accionesTarjeta {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.tarjetaColor:hover .accionesTarjeta,
+.tarjetaColor:focus-within .accionesTarjeta,
+.tarjetaColor.bloqueada .accionesTarjeta {
+  opacity: 1;
+}
+
+.btnCopiar,
+.btnBloqueo {
+  position: relative;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  line-height: 1;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.btnCopiar:hover,
+.btnBloqueo:hover {
+  background-color: #e0e0e0;
+}
+
+.tipBtn {
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: white;
+  font-size: 0.7rem;
+  padding: 3px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 10;
+}
+
+.btnCopiar:hover .tipBtn,
+.btnBloqueo:hover .tipBtn {
+  opacity: 1;
+}
+
+.tarjetaColor.bloqueada {
+  outline: 2px solid #222;
+  outline-offset: 2px;
 }
