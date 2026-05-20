@@ -18,7 +18,7 @@
 
   <div class="controles">
     <div class="radiosGrupo">
-    <label>Composición:</label>
+      <label>Composición:</label>
       <input type="radio" name="composicion" id="composicion6" value="6">
       <label for="composicion6">6</label>
       <input type="radio" name="composicion" id="composicion8" value="8">
@@ -26,7 +26,7 @@
       <input type="radio" name="composicion" id="composicion9" value="9" checked>
       <label for="composicion9">9</label>
     </div>
-  
+
     <div class="radiosGrupo">
       <label>Formato: </label>
       <input type="radio" name="formato" id="hex" value="hex" checked>
@@ -34,25 +34,33 @@
       <input type="radio" name="formato" id="hsl" value="hsl">
       <label for="hsl">HSL</label>
     </div>
+
     <button id="botonGenerar">¡Generar!</button>
   </div>
 
-  <main>
-    <div id="paleta">
-    </div>
-  </main>
-
-<footer>
-  <div class="lineaFooter"></div>
-  <div class="footerLinks">
-    <a href="https://github.com/FFigueroa26" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://www.linkedin.com/in/ffigueroa28/" target="_blank" rel="noopener">LinkedIn</a>
+  <div class="pagina">
+    <main>
+      <div id="paleta"></div>
+    </main>
+    <aside id="panelGuardadas">
+      <button id="botonGuardar">Guardar paleta</button>
+      <h2>Tus paletas guardadas</h2>
+      <div id="listaPaletas"></div>
+    </aside>
   </div>
-  <p><i>Un experimento de color por Felix Figueroa.</i> &copy; 2026</p>
-</footer>
 
-      <div id="toast" role="status" aria-live="polite"></div>
-      <script src="js/script.js"></script>
+  <div class="lineaFooter"></div>
+
+  <footer>
+    <div class="footerLinks">
+      <a href="https://github.com/FFigueroa26" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/ffigueroa28/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p><i>Un experimento de color por Felix Figueroa.</i> &copy; 2026</p>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="js/script.js"></script>
 
 </body>
 </html>

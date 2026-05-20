@@ -15,6 +15,9 @@ Aplicación web para generar paletas de color aleatorias, elegir cantidad de col
 - Cambio de formato visual: `HEX` o `HSL`.
 - Bloqueo de colores individuales para conservarlos al regenerar la paleta.
 - Copia de código al portapapeles con clic en el ícono de cada tarjeta.
+- Guardado de paletas en `localStorage` con persistencia al refrescar la página.
+- Detección de paletas duplicadas al intentar guardar.
+- Renombrado de paletas guardadas directamente desde el panel.
 - Notificaciones tipo toast para confirmar acciones.
 - Diseño responsive para escritorio y celular.
 
@@ -28,7 +31,10 @@ Aplicación web para generar paletas de color aleatorias, elegir cantidad de col
 6. Haz clic en el ícono de copiar para copiar el código del color.
 7. Haz clic en el ícono de candado para bloquear ese color y conservarlo al regenerar.
 8. Para desbloquear un color, haz clic nuevamente en el candado.
-9. Verás un mensaje en pantalla confirmando cada acción.
+9. Pulsa `Guardar paleta` en el panel lateral para guardar la paleta actual.
+10. Las paletas guardadas persisten aunque recargues la página.
+11. Puedes renombrar cualquier paleta guardada haciendo clic en su nombre.
+12. Verás un mensaje en pantalla confirmando cada acción.
 
 ## Manual técnico
 
@@ -136,6 +142,6 @@ URL esperada para este proyecto:
 ## Posibles mejoras futuras
 
 - Botón para copiar toda la paleta.
-- Guardar paletas favoritas en `localStorage`.
+- ~~Guardar paletas favoritas en `localStorage`.~~ ✓ Implementado.
 - Exportar paleta a `JSON` o imagen.
 - Soporte de más formatos (`RGB`, `CMYK` aproximado).

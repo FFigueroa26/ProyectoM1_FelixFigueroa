@@ -3,6 +3,10 @@ header {
   margin-bottom: 28px;
 }
 
+.pagina {
+  position: relative;
+}
+
 main {
   max-width: 1000px;
   margin: 0 auto;
@@ -16,6 +20,130 @@ main {
   max-width: 615px;
   margin-top: 28px;
   margin-inline: auto;
+}
+
+/* Panel lateral */
+#panelGuardadas {
+  width: 420px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  position: absolute;
+  left: calc(50% + 340px);
+  top: -80px;
+}
+
+#panelGuardadas h2 {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+#botonGuardar {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  font-family: Arial, sans-serif;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#botonGuardar:hover {
+  background-color: #444;
+}
+
+#listaPaletas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.sinPaletas {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+.paletaGuardada {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.nombrePaleta {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #333;
+  background: none;
+  border: none;
+  border-bottom: 1px dashed transparent;
+  width: 100%;
+  cursor: pointer;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: border-color 0.2s;
+}
+
+.nombrePaleta:hover,
+.nombrePaleta:focus {
+  border-color: #aaa;
+  outline: none;
+}
+
+.muestrasGuardadas {
+  display: flex;
+  gap: 3px;
+}
+
+.muestraGuardada {
+  flex: 1;
+  height: 20px;
+  border-radius: 3px;
+}
+
+.accionesPaleta {
+  display: flex;
+  gap: 6px;
+}
+
+.accionesPaleta button {
+  flex: 1;
+  padding: 4px 0;
+  font-size: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.2s;
+}
+
+.btnCargar {
+  background-color: #222;
+  color: white;
+}
+
+.btnCargar:hover {
+  background-color: #444;
+}
+
+.btnEliminar {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd !important;
+}
+
+.btnEliminar:hover {
+  background-color: #e0e0e0;
 }
 
 .lineaFooter {
